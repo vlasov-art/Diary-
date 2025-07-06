@@ -201,9 +201,9 @@ def bas():
     for el in weekdays:
         lesson_day = les.readline().split()
         for urok in range(1, len(lesson_day) + 1):
-            matrix_btn[weekdays.index(el)][urok - 1] = CTkButton(timetable.tab(el), width=300, height=60, corner_radius=20,
+            matrix_btn[weekdays.index(el)][urok - 1] = CTkButton(timetable.tab(el), width=200, height=40, corner_radius=20,
                                                                 text=str(urok) + ' урок: ' + lesson_day[urok - 1],
-                                                                text_color='white', font=("Arial", 20),
+                                                                text_color='white', font=("Arial", 15),
                                                                 command=lambda idx=[weekdays.index(el), urok - 1]: homework(idx))
             matrix_btn[weekdays.index(el)][urok - 1].place(relx=0.5, rely=0.05 + (urok - 1) * 0.1, anchor=tk.CENTER)
         label = CTkLabel(timetable.tab(el), text='Нажмите на кнопку для добавление домашнего задания или для просмотра д/з этого дня', text_color='white', font=("Arial", 24, "bold"))
