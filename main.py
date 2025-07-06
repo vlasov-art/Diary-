@@ -81,7 +81,7 @@ def reg():
         d1 = []
         for i in range(1, 9):
             d1.append(CTkEntry(week.tab(weekday), placeholder_text=str(i) + ' урок', corner_radius=10, width=650, height=40))
-            d1[i - 1].place(relx=0.5, rely=0.05 + (i - 1) * 0.06, anchor=tk.CENTER)
+            d1[i - 1].place(relx=0.5, rely=0.05 + (i - 1) * 0.08, anchor=tk.CENTER)
         lessons[weekday] = d1
 
 
@@ -105,7 +105,7 @@ def reg():
         add_lesson(el)
 
     button_save = CTkButton(master=app, text='Save', command=save_lessons)
-    button_save.pack(padx=20, pady=10)
+    button_save.place(relx=0.5, rely=0.8, anchor=tk.CENTER)
 
     app.mainloop()
     pass
